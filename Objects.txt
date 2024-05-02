@@ -1,0 +1,19 @@
+In powershell everything is an object.
+In technical terms, an object is an individual instance of specific template, called a class.
+A class specifies the kinds of things an object will contain. An objects class determines its methos, or actions that can be taken on that object.
+In other words, the methods are all the things an object can do.
+For example a list object might ahve sort() method that when called will sort the list. Likewise an objects class determines its properties, the objects variables.
+
+$color = 'red'
+$color.Length
+    3
+
+Get-Member -InputObject $color
+this will list all methods and properties that exist on this string object.
+
+So lets use a method:
+$color.Remove(1,1)
+ Rd
+now when you call color you get it lower case:
+$color
+    red

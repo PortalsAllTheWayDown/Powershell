@@ -1,0 +1,25 @@
+Get-Alias  allows you to see all the built-in aliases and which Powershell commands they map to.
+
+Most commands follow a Verb-Noun scheme.
+
+Most of the built-in commands from microsoft are cmdlets which are typically commands written in other languages like C#. Running Get-Command yooull see a CommandType field.
+
+Get-Command -Name Get-Alias
+
+functions on the other hand are commands written in PowerShell. You write functions to get things done; you can leave the cmdlets to the software developers.
+
+Get-Command -Verb Get
+
+Get-Command -Verb Get -Noun Content
+
+This is how you can narrow down your search
+
+Get-Command -Name Get-Content
+
+To Get help you would put in: Get-Help
+ex: Get-Help Add-Content
+You can even get examples ex: Get-Help Add-Content -Examples
+
+Get-Help about_Core_commands
+
+Get-Help -Name About*

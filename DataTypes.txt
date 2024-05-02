@@ -1,0 +1,26 @@
+Bools,Strings, and Integers
+
+$foo = 1
+$foo = 'one'
+$foo = $true
+
+$num = 1
+$num.GetType().name
+    Int32
+$num = 1.5
+$num.GetType().name
+    Double
+[Int32]$num
+    2
+
+$language = 'PowerShell'
+$color = 'blue'
+$sentence = "Today, you learned that $language loves the color $color"
+$sentence
+    Today, you learned that PowerShell loves the color blue
+
+If you do the sentence with '' single quotes it wont work. it will come out:
+    Today, you learned that $language loves the color $color
+
+Powershell wont look past the single quotes so whatever you put in single quotes comes out a literal.
+

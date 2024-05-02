@@ -1,0 +1,22 @@
+All variables in powershell start with a dollar sign $
+to display a variable put : $MaximumHistoryCount
+
+change it: $MaximumHistoryCount = 200
+
+$color = 'blue'
+
+automatic variables:
+There are premade variables that powershell itself uses.
+$null equals nothing and is intended this way.
+$LASTEXITCODE gives you the last exit code of your last powershell command
+for example if you ping an incorrect domain name the exit code is 1
+if you ping google.com the exit code is 0 which means it didnt error out.
+
+This is how you can find all variables ending in preference
+
+Get-Variable -Name *Preference
+
+$ErrorActionPreference = 'SilentlyContinue'
+-Changing this variable to silently continue will make it to where when you should get an error it doesnt put anything out.
+-This is what your would call a preference variable
+-Run Get-Help about_Preference_Variables to learn more about preference variables
