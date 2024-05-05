@@ -23,3 +23,17 @@ You can even get examples ex: Get-Help Add-Content -Examples
 Get-Help about_Core_commands
 
 Get-Help -Name About*
+
+File paths with spaces in them for example need quotes:
+Set-Location 'c:\program files'
+
+` is how you can quote a single character:
+$v = 'files'
+Write-Output "`$v is $v"
+$v is files
+
+Write-Output "`$v is '$v'"
+$v is 'files'
+
+Get-Help about_Escape_Characters
+

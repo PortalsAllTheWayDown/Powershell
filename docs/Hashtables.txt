@@ -1,0 +1,50 @@
+Arrays and ArrayLists are great when you need your data associated with only a position in a list.
+If you have a list of usernames you want to match to real names you could use a hashtable(or dictionary).
+A hashtable is a PowerShell data structure that contains a list of key-value pairs.
+
+$users = @{
+    abertram = 'Adam Bertram';
+    raquelcer = 'Raquel Cerillo';
+    zheng21 = 'Justin Zheng'
+}
+
+$users
+
+Name        value
+----        -----
+abertram    Adam Bertram
+raquelcer   Raquel Cerillo
+zheng21     Justin Zheng
+
+Powershell will not let you define a hashtable with duplicate keys. Each key has to uniquely point to a single value,  which can be an array or even another hashtable!
+
+
+Reading Elements from Hashtables:
+To access a specific value in a hash table you use its key.
+There are two ways:
+$users['abertram']
+Adam Bertram
+
+$users.abertram
+Adam Bertram
+
+To access the Keys and Values properties:
+
+$users.Keys
+abertram
+raquelcer
+zheng21
+
+$users.Values
+Adam Bertram
+Raquel Cerillo
+Justin Zheng
+
+To see all properties of a hastable run:
+Select-Object -InputObject $yourobject -Property *
+
+Adding and Modifying Hashtable Items
+
+$users.Add('natice', 'Natalie Ice')
+$users['phrigo'] = 'Phil Rigo'
+
